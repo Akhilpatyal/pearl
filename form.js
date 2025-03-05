@@ -56,7 +56,7 @@ async function handleFormSubmit(formId) {
 
         const payload = {
             page_url: "brigade-yelahanka.bangalorenewproperties.in",
-            project_name: "birlasarjapur",
+            project_name: "SahuCityPearl",
             name: name,
             mobile: phone,
             city: city
