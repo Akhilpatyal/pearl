@@ -1,0 +1,1279 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="./style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+ 
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/fav-icon.png" /> 
+    <title>Pearl</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .excont {
+            margin-top: 6rem;
+        }
+
+        @media screen and (max-width:768px) {
+            .excont {
+                margin-top: 0rem;
+            }
+        }
+    </style>
+  <!-- SweetAlert CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+
+
+    <div id="preloader">
+        <div class="loader">
+            <img src="assets/images/pageloader.svg" alt="Logo" class="preloader-logo" />
+        </div>
+    </div>
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/"><img src="./assets/images/logo.png" alt="logo" /></a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                        <path
+                            d="M9 10.5H16.5C16.8978 10.5 17.2794 10.658 17.5607 10.9393C17.842 11.2206 18 11.6022 18 12C18 12.3978 17.842 12.7794 17.5607 13.0607C17.2794 13.342 16.8978 13.5 16.5 13.5H9C8.60218 13.5 8.22064 13.342 7.93934 13.0607C7.65804 12.7794 7.5 12.3978 7.5 12C7.5 11.6022 7.65804 11.2206 7.93934 10.9393C8.22064 10.658 8.60218 10.5 9 10.5ZM19.5 22.5H27C27.3978 22.5 27.7794 22.658 28.0607 22.9393C28.342 23.2206 28.5 23.6022 28.5 24C28.5 24.3978 28.342 24.7794 28.0607 25.0607C27.7794 25.342 27.3978 25.5 27 25.5H19.5C19.1022 25.5 18.7206 25.342 18.4393 25.0607C18.158 24.7794 18 24.3978 18 24C18 23.6022 18.158 23.2206 18.4393 22.9393C18.7206 22.658 19.1022 22.5 19.5 22.5ZM9 16.5H27C27.3978 16.5 27.7794 16.658 28.0607 16.9393C28.342 17.2206 28.5 17.6022 28.5 18C28.5 18.3978 28.342 18.7794 28.0607 19.0607C27.7794 19.342 27.3978 19.5 27 19.5H9C8.60218 19.5 8.22064 19.342 7.93934 19.0607C7.65804 18.7794 7.5 18.3978 7.5 18C7.5 17.6022 7.65804 17.2206 7.93934 16.9393C8.22064 16.658 8.60218 16.5 9 16.5Z"
+                            fill="#333333"></path>
+                    </svg>
+                </button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            <img src="./assets/images/logo.png" alt="logo" />
+
+                        </h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item nav-letter">
+                                <a class="nav-link active prevent-close" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item nav-letter">
+                                <a class="nav-link prevent-close" onclick="scrollToSection('aboutus')">About Pearl</a>
+                            </li>
+                            <li class="nav-item nav-letter">
+                                <a class="nav-link prevent-close" onclick="scrollToSection('property')">Property Highlights</a>
+                            </li>
+                            <li class="nav-item nav-letter">
+                                <a class="nav-link prevent-close" onclick="scrollToSection('pricelist')"> Project
+                                    Configuration</a>
+                            </li>
+                            <li class="nav-item nav-letter">
+                                <a class="nav-link prevent-close" onclick="scrollToSection('amenities')">Amenities</a>
+                            </li>
+                            <li class="nav-item nav-letter">
+                                <a class="nav-link prevent-close" onclick="scrollToSection('gallery')">Gallery</a>
+                            </li>
+                            <li class="nav-item nav-letter">
+                                <a class="nav-link prevent-close" onclick="scrollToSection('contactus')">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Navbar menu for large screens -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-0 gap-md-5">
+                        <li class="nav-item nav-letter">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item nav-letter">
+                            <a class="nav-link pointing" onclick="scrollToSection('aboutus')">About Pearl</a>
+                        </li>
+                        <li class="nav-item nav-letter">
+                            <a class="nav-link pointing" onclick="scrollToSection('property')">Property Highlights</a>
+                        </li>
+                        <li class="nav-item nav-letter">
+                            <a class="nav-link pointing" onclick="scrollToSection('pricelist')"> Project
+                                Configuration</a>
+                        </li>
+                        <li class="nav-item nav-letter">
+                            <a class="nav-link pointing" onclick="scrollToSection('amenities')">Amenities</a>
+                        </li>
+                        <li class="nav-item nav-letter">
+                            <a class="nav-link pointing" onclick="scrollToSection('gallery')">Gallery</a>
+                        </li>
+                        <li class="nav-item nav-letter">
+                            <a class="nav-link pointing" onclick="scrollToSection('contactus')">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="excont">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="swiper banner-slider ">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide position-relative">
+                                    <div class="position-absolute tempo2">
+                                        <p class="text-black tempo1">
+                                            <strong>SAHU CITY PHASE 2 - RERA REGN. NO.: UPRERAPRJ391104/02/2024</strong>
+                                           
+                                        </p>
+                                    </div>
+                                    <img src="./assets/images/banner/newweb.png" alt="floorplan"
+                                        class="w-100 d-none d-md-block d-lg-block" />
+                                    <img src="./assets/images/banner/m1.png" alt="floorplan"
+                                        class="w-100 d-block d-md-none d-lg-none" />
+                                    <!-- </a> -->
+                                </div>
+                                
+
+                            </div>
+
+                            <!-- Custom Swiper buttons -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+        </section>
+        <!-- ------------Banner video end ----------------->
+
+        <!-- -------About us ---------- -->
+        <section class="aboutus customer-container mt-md-5 fade-in-left" id="aboutus">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-5 fade-in-left-item"> 
+                        <h1 class="heading  mb-md-5">ABOUT PEARL</h1>
+                        <p class="mt-md-3">
+                            Welcome to Sahu City Pearl, a premier residential development that redefines modern living in the vibrant expanse of Sahu City. Ideally situated on the well-connected Sultanpur Road (NH-56), near Purvanchal Expressway, Sahu City Pearl offers near-luxury apartments meticulously designed to cater to your lifestyle needs.
+                        </p>
+                        <p>
+                            Experience an array of contemporary amenities, including a clubhouse, swimming pool, gym, theme garden, kids' play area, gazebos, senior citizen area, flower orchard, herbs garden, jogging track, badminton court, and more. These facilities are thoughtfully crafted to enhance your everyday living with comfort and convenience.
+                        </p>
+                        <button class="primary-btn mt-md-5 d-md-block d-none btn-brochure" onclick="openForm2()">
+                            Download Brochure
+                        </button>
+                    </div>
+                    <div class="col-md-7 fade-in-left-item">
+                        <img src="./assets/images/about.jpg" alt="about" class="w-100 rounded-3 shadow-lg" />
+
+                 
+                        <hr />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------About us END -->
+
+
+        <!-- ---property highlight----- -->
+        <section class="property-sec mt-md-5" id="property">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h1 class="heading mb-4 text-center">Property Highlights</h1>
+                        <img src="./assets/images/about/property.webp" alt="property-1"
+                            class="w-100 d-none d-md-block d-lg-block" />
+                        <img src="./assets/images/about/property5.jpg" alt="property-1"
+                            class="w-100 d-block d-md-none d-lg-none" />
+                        <img src="./assets/images/property-icon.png" alt="property-1" class="img-fluid property-icon" />
+                    </div>
+                    <div class="col-md-5 align-content-center mb-4 mb-md-0">
+                        <div class="counter d-flex flex-column gap-lg-5 mt-2 mt-md-0">
+                            <div class="counter-box d-flex">
+                                <div class="counter-number" data-target="17" data-sign="+ ">
+                                    0
+                                </div>
+                                <div class="counter-label">Township Area</div>
+                            </div>
+                            <div class="counter-box d-flex dhdcd">
+                                <div class="cntr-heading">
+                                    Phase 1
+                                </div>
+                                <div class="counter-label m10"> Possession Started</div>
+                            </div>
+                            <div class="counter-box d-flex">
+                                <div class="counter-number" data-target="50" data-sign="">
+                                    0
+                                </div>
+                                <div class="counter-label">Years of Experience</div>
+                            </div>
+                            <div class="counter-box d-flex">
+                                <div class="counter-number" data-target="500" data-sign="+">
+                                    0
+                                </div>
+                                <div class="counter-label">Happy Customers</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="pricelist position-relative proj-config" id="pricelist">
+
+            <div class="sideimgprice">
+                <img src="assets/images/icon41.svg" alt="">
+            </div>
+
+            <div class="proj-config-container">
+                <div class="cust-container-2 ms-auto">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-5 pl- extcentetr">
+                            <h1 class="heading pricehead mb-md-4 pdd-2">
+                                Price list
+                            </h1>
+                            <div class="pricelist-content">
+
+                                <p>
+                                    2 BHK –  &nbsp; ₹56.05 Lakhs*
+
+                                </p>
+                                <p>
+                                    3 BHK –  &nbsp; ₹70.49 Lakhs*
+
+
+                                </p>
+                                <p>
+                                    3 BHK + Store – ₹77.34 Lakhs*
+
+                                </p>
+                                <!-- <h3 class="">980.49 &nbsp;<span>Sq.Ft</span> </h3>
+                                <h3>91.09 &nbsp;<span>Sq.Mt</span></h3> -->
+                                <button class="primary-btn-2" onclick="openForm()" style="cursor:pointer">View
+                                    Pricing</button>
+                            </div>
+                        </div>
+                        <div class="col-md-7 p-0">
+                            <ul class="nav nav-tabs justify-content-center mx-auto" id="priceelist" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="tab-2bhk" data-bs-toggle="tab"
+                                        data-bs-target="#pane-2bhk" type="button" role="tab">
+                                        2BHK
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="tab-3bhk" data-bs-toggle="tab"
+                                        data-bs-target="#pane-3bhk" type="button" role="tab">
+                                        3BHK
+                                    </button>
+                                </li>
+
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="tab-Store" data-bs-toggle="tab"
+                                        data-bs-target="#pane-store" type="button" role="tab">
+                                        3BHK + Store
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content" id="planTabsContent">
+                                <div class="tab-pane fade show active" id="pane-2bhk" role="tabpanel">
+                                    <!-- Master Plan Slider -->
+                                    <div class="pricelistimg">
+                                        <img src="./assets/images/bhk1.jpg" alt="floorplan" class="w-100 rounded" />
+                                        <p>Artist's Impression</p>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="pane-3bhk" role="tabpanel">
+                                    <!-- Floor Plan Slider -->
+                                    <div class="pricelistimg">
+                                        <img src="./assets/images/bhk2.jpg" alt="floorplan" class="w-100 rounded" />
+                                        <p>Artist's Impression</p>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="pane-store" role="tabpanel">
+                                    <div class="pricelistimg">
+                                        <img src="./assets/images/bhk3.jpg" alt="floorplan" class="w-100 rounded" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ------------------project configuration end------------ -->
+
+        <!-- ---------Amenities--------- -->
+        <section class="amenities customer-container pt-5 pb-5" id="amenities">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 d-md-flex align-items-center justify-content-between">
+                        <div class="amenities-heading d-flex">
+                            <h1 class="heading mb-md-5">Amenities</h1>
+                            <div class="custom-swiper-buttons-amenities d-flex">
+                                <div class="swiper-button-prev-amenities">
+                                    <img src="./assets/images/prev-icon.svg" alt="Previous" />
+                                </div>
+                                <div class="swiper-button-next-amenities">
+                                    <img src="./assets/images/next-icon.svg" alt="Next" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="swiper amenities-slider">
+                            <div class="swiper-wrapper ame1">
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/amenities/1.svg" alt="amenities" class="w-100 p-md-5" />
+                                    <h5 class="text-center">Gym</h5>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/amenities/2.svg" alt="amenities" class="w-100 p-md-5" />
+                                    <h5 class="text-center">Badminton</h5>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/amenities/3.svg" alt="amenities" class="w-100 p-md-5" />
+                                    <h5 class="text-center">Garden</h5>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/amenities/4.svg" alt="amenities" class="w-100 p-md-5" />
+                                    <h5 class="text-center">Swimming Pool </h5>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------Amenities end--------- -->
+
+        <!-- ---------Gallery-------- -->
+        <section class="gallery-sec customer-container pt-md-5 pb-md-5" id="gallery">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 d-md-flex align-items-center justify-content-between">
+                        <h1 class="heading mb-md-4">Gallery</h1>
+                        <ul class="nav nav-tabs mb-4" id="planTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="Exterior-tab" data-bs-toggle="tab"
+                                    data-bs-target="#exterior" type="button" role="tab">
+                                    <h5> Exterior</h5>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="Interior-tab" data-bs-toggle="tab"
+                                    data-bs-target="#interior" type="button" role="tab">
+                                    <h5> Interior</h5>
+                                </button>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <!-- Swiper -->
+                    <div class="tab-content" id="planTabsContent">
+                        <div class="tab-pane fade show active" id="exterior" role="tabpanel">
+                            <div class="container-fluid">
+                                <div class="swiper gallery-slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a data-fancybox="gallery-swiper"
+                                                href="./assets/images/gallery/exterior/1.png" class="">
+                                                <img src="./assets/images/gallery/exterior/1.png" alt="Interior"
+                                                    class="w-100 rounded" />
+                                                <p>Artist's Impression</p>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a data-fancybox="gallery-swiper"
+                                                href="./assets/images/gallery/exterior/2.png" class="">
+                                                <img src="./assets/images/gallery/exterior/2.png" alt="Interior"
+                                                    class="w-100 rounded" />
+                                                <p>Artist's Impression</p>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a data-fancybox="gallery-swiper"
+                                                href="./assets/images/gallery/exterior/3.png" class="">
+                                                <img src="./assets/images/gallery/exterior/3.png" alt="Interior"
+                                                    class="w-100 rounded" />
+                                                <p>Artist's Impression</p>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a data-fancybox="gallery-swiper"
+                                                href="./assets/images/gallery/exterior/4.png" class="">
+                                                <img src="./assets/images/gallery/exterior/4.png" alt="Interior"
+                                                    class="w-100 rounded" />
+                                                <p>Artist's Impression</p>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a data-fancybox="gallery-swiper"
+                                                href="./assets/images/gallery/exterior/5.png" class="">
+                                                <img src="./assets/images/gallery/exterior/5.png" alt="Interior"
+                                                    class="w-100 rounded" />
+                                                <p>Artist's Impression</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Swiper buttons for Master Plan -->
+                                    <div class="gallery-arrow">
+                                        <div class="gallery-swiper-button-prev swiper-button-prev">
+                                            <img src="./assets/images/prev-icon.svg" alt="Previous" />
+                                        </div>
+                                        <div class="gallery-swiper-button-next swiper-button-next">
+                                            <img src="./assets/images/next-icon.svg" alt="Next" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    
+
+                        <div class="tab-pane fade" id="interior" role="tabpanel">
+                            <div class="container-fluid">
+                                <div class="swiper gallery-slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a data-fancybox="gallery-swiper"
+                                                href="./assets/images/gallery/interior/1.jpg">
+                                                <img src="./assets/images/gallery/interior/1.jpg" alt="Interior"
+                                                    class="w-100 rounded" />
+                                            </a>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <a data-fancybox="gallery-swiper"
+                                                href="./assets/images/gallery/interior/2.jpg">
+                                                <img src="./assets/images/gallery/interior/2.jpg" alt="Interior"
+                                                    class="w-100 rounded" />
+                                            </a>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <a data-fancybox="gallery-swiper"
+                                                href="./assets/images/gallery/interior/3.jpg">
+                                                <img src="./assets/images/gallery/interior/3.jpg" alt="Interior"
+                                                    class="w-100 rounded" />
+                                            </a>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <a data-fancybox="gallery-swiper"
+                                                href="./assets/images/gallery/interior/1.jpg">
+                                                <img src="./assets/images/gallery/interior/1.jpg" alt="Interior"
+                                                    class="w-100 rounded" />
+                                            </a>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <a data-fancybox="gallery-swiper"
+                                                href="./assets/images/gallery/interior/2.jpg">
+                                                <img src="./assets/images/gallery/interior/2.jpg" alt="Interior"
+                                                    class="w-100 rounded" />
+                                            </a>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <a data-fancybox="gallery-swiper"
+                                                href="./assets/images/gallery/interior/3.jpg">
+                                                <img src="./assets/images/gallery/interior/3.jpg" alt="Interior"
+                                                    class="w-100 rounded" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Swiper buttons for Master Plan -->
+                                    <div class="gallery-arrow">
+                                        <div class="gallery-swiper-button-prev swiper-button-prev">
+                                            <img src="./assets/images/prev-icon.svg" alt="Previous" />
+                                        </div>
+                                        <div class="gallery-swiper-button-next swiper-button-next">
+                                            <img src="./assets/images/next-icon.svg" alt="Next" />
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------Gallery-------- -->
+
+        <!-- ---------floor plan-------- -->
+        <section class="floor-plan customer-container pt-5 pb-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 d-md-flex justify-content-between floor-plan-heading">
+                        <h1 class="heading mb-md-4">Floor Plan</h1>
+                        <ul class="nav nav-tabs mb-4" id="planTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="masterplan-tab" data-bs-toggle="tab"
+                                    data-bs-target="#masterplan" type="button" role="tab">
+                                    <h5> Master Plan</h5>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="floorplan-tab" data-bs-toggle="tab"
+                                    data-bs-target="#floorplan" type="button" role="tab">
+                                    <h5> Floor Plan</h5>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Swiper -->
+                    <div class="tab-content" id="planTabsContent">
+                        <!-- Master Plan Slider -->
+                        <div class="tab-pane fade show active" id="masterplan" role="tabpanel">
+                            <div class="swiper masterplanSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/floor-plan/1.webp" alt="floorplan"
+                                            class="w-100 floor-img blurred" onclick="flooropenForm()" />
+                                        <img src="./assets/images/plus.png" alt="floorplan" class="plus-icon"
+                                            onclick="flooropenForm()" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/floor-plan/2.webp" alt="floorplan"
+                                            class="w-100 floor-img blurred" onclick="flooropenForm()" />
+                                        <img src="./assets/images/plus.png" alt="floorplan" class="plus-icon"
+                                            onclick="flooropenForm()" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/floor-plan/3.webp" alt="floorplan"
+                                            class="w-100 floor-img blurred" onclick="flooropenForm()" />
+                                        <img src="./assets/images/plus.png" alt="floorplan" class="plus-icon"
+                                            onclick="flooropenForm()" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/floor-plan/4.webp" alt="floorplan"
+                                            class="w-100 floor-img blurred" onclick="flooropenForm()" />
+                                        <img src="./assets/images/plus.png" alt="floorplan" class="plus-icon"
+                                            onclick="flooropenForm()" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/floor-plan/5.webp" alt="floorplan"
+                                            class="w-100 floor-img blurred" onclick="flooropenForm()" />
+                                        <img src="./assets/images/plus.png" alt="floorplan" class="plus-icon"
+                                            onclick="flooropenForm()" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/floor-plan/6.webp" alt="floorplan"
+                                            class="w-100 floor-img blurred" onclick="flooropenForm()" />
+                                        <img src="./assets/images/plus.png" alt="floorplan" class="plus-icon"
+                                            onclick="flooropenForm()" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/floor-plan/7.webp" alt="floorplan"
+                                            class="w-100 floor-img blurred" onclick="flooropenForm()" />
+                                        <img src="./assets/images/plus.png" alt="floorplan" class="plus-icon"
+                                            onclick="flooropenForm()" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/floor-plan/8.webp" alt="floorplan"
+                                            class="w-100 floor-img blurred" onclick="flooropenForm()" />
+                                        <img src="./assets/images/plus.png" alt="floorplan" class="plus-icon"
+                                            onclick="flooropenForm()" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/floor-plan/9.webp" alt="floorplan"
+                                            class="w-100 floor-img blurred" onclick="flooropenForm()" />
+                                        <img src="./assets/images/plus.png" alt="floorplan" class="plus-icon"
+                                            onclick="flooropenForm()" />
+                                    </div>
+                                </div>
+
+                                <!-- Swiper buttons for Master Plan -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+
+                        <!-- Floor Plan Slider -->
+                        <div class="tab-pane fade" id="floorplan" role="tabpanel">
+                            <div class="swiper masterplanSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/master-plan/1.webp" alt="floorplan"
+                                            class="w-100 floor-img blurred" onclick="flooropenForm()" />
+                                        <img src="./assets/images/plus.png" alt="floorplan" class="plus-icon"
+                                            onclick="flooropenForm()" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/master-plan/1.webp" alt="floorplan"
+                                            class="w-100 floor-img blurred" onclick="flooropenForm()" />
+                                        <img src="./assets/images/plus.png" alt="floorplan" class="plus-icon"
+                                            onclick="flooropenForm()" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/master-plan/1.webp" alt="floorplan"
+                                            class="w-100 floor-img blurred" onclick="flooropenForm()" />
+                                        <img src="./assets/images/plus.png" alt="floorplan" class="plus-icon"
+                                            onclick="flooropenForm()" />
+                                    </div>
+                                </div>
+                                <!-- Swiper buttons for Master Plan -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------floor plan end-------- -->
+
+        <!-- ---------location-------- -->
+        <section class="location pt-md-5 pb-md-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 d-flex align-items-center location-heading"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="location-content mb-4">
+                            <h1 class="heading mb-md-4">Location Advantages</h1>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Hospitals
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul class="location-list">
+                                                <li>Medanta Hospital - 10 Mins</li>
+                                                <li> Atal Bihari Medical University - 7 Mins</li>
+                                                <!-- <li>Kisan Path - 3 Mins</li>
+                                                <li>HCL IT City - 5 Mins</li>
+                                                <li>Shaheedpath - 7 Mins</li> -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Entertainment
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul class="location-list">
+                                                <li> Ekana Cricket Stadium – 6 mins</li>
+                                                <li>Phonenix Palassio Mall - 7 Mins</li>
+                                                <li>Lulu Mall - 10 Mins </li>
+                                                <li>HCL IT City - 5 Mins</li>
+                                                <li>Shaheedpath - 7 Mins</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Education
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul class="location-list">
+                                                <li>G.D Goenka - 10 Mins</li>
+                                                <li> AR jaipuria - 8 Mins</li>
+                                                <li>MR jaipuria - 8 Mins</li>
+                                                <li>CMS - 9 Mins</li>
+                                                <!-- <li>Shaheedpath - 7 Mins</li> -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                            aria-expanded="false" aria-controls="collapseFour">
+                                            IT Hubs
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul class="location-list">
+                                                <li>HCL IT City - 5 Mins</li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFive">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseFive">
+                                            Transport
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul class="location-list">
+                                                <li>Near Kisan Path and Purvanchal expressway.</li>
+                                                <li>International Airport – 15 mins </li>
+                                                <li>Alambagh Bus & Metro Station - 25 Mins</li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.7794620692134!2d81.0701879!3d26.783299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be51807369b03%3A0xc514e13d63cb578d!2sSahu%20City%20Pearl!5e0!3m2!1sen!2sin!4v1735221038292!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------location end-------- -->
+
+        <!-- -------------------About SLD----------------------- -->
+        <section class="about-sld">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="./assets/images/about-sld.webp" alt="about sld" class="w-100" />
+                    </div>
+                    <div class="col-md-1 d-md-block d-none"></div>
+                    <div class="col-md-6 align-content-center">
+                        <h4 class="heading mb-md-5 mt-2 mt-md-0 fs-1">Why Invest in Sahu City Pearl?</h4>
+                       <ul style="list-style: none;">
+                        <li><i class="fa-solid fa-feather-pointed"></i> Modern Lifestyle Amenities– Swimming Pool, Kids Pool, Jogging Track, Skating Rink
+                        </li>
+                        <li><i class="fa-solid fa-feather-pointed"></i> Clubhouse & Gym – Stay fit with world-class facilities
+                        </li>
+                        <li><i class="fa-solid fa-feather-pointed"></i> Recreational Spaces – Badminton Court, Relaxation Areas</li>
+                        <li><i class="fa-solid fa-feather-pointed"></i> Convenient Living – Dedicated Car Parking & 24x7 Security</li>
+                        <li><i class="fa-solid fa-feather-pointed"></i>  Flexible Payment Plans Available!</li>
+                       </ul>
+                        
+                        <img class="sld-icon d-md-block d-none" src="./assets/images/aboutsld-icon.svg"
+                            alt="sld-icon" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- -------------------About SLD----------------------- -->
+
+
+        <!-- Price List End -->
+        <!-- --------------Sahu Group----------------------- -->
+        <section class="sahu-grp customer-container pt-5">
+            <div class="cust-container">
+                <h1 class="heading4 text-center mb-md-5">
+                    Sahu Group Of Companies & Our Verticals
+                </h1>
+                <div class="row">
+                    <div class="swiper Verticals">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/images/icons/4.svg" />
+                                <p>Entertainment</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/icons/2.svg" />
+                                <p>Real Estate</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/icons/1.svg" />
+                                <p>Entertainment</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/icons/3.svg" />
+                                <p>FMCG</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/icons/5.svg" />
+                                <p>Automotive</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/icons/2.svg" />
+                                <p>Real Estate</p>
+                            </div>
+                        </div>
+                        <!-- Swiper buttons for Master Plan -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------------------Sahu Group--------------- -->
+
+
+
+
+
+
+
+
+        <!-- -------------Approved Loan partners------------- -->
+        <section class="loan-patners customer-container pt-md-5">
+            <div class="container">
+                <div class="row text-center align-content-center p-2">
+                    <div class="col-md-12">
+                        <h1 class="heading text-center mb-md-5 mt-3">
+                            Approved Loan Partners
+                        </h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="swiper LogoSlider">
+                            <div class="swiper-wrapper">
+                                <!-- First slide -->
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/logo/icici-logo.webp" alt="icici" />
+                                </div>
+                                <!-- Second slide -->
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/logo/canara.webp" alt="canara" />
+                                </div>
+                                <!-- Third slide -->
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/logo/iifl.webp" alt="iifl" />
+                                </div>
+                                <!-- Fourth slide -->
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/logo/indian.webp" alt="indian bank" />
+                                </div>
+                                <!-- Fifth slide -->
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/logo/axic.webp" alt="axic" />
+                                </div>
+                                <!-- Sixth slide -->
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/logo/hdfc.webp" alt="hdfc" />
+                                </div>
+                            </div>
+                            <!-- Swiper navigation buttons -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- -------------Approved Loan partners------------- -->
+
+        <!---------------- get in touch form-4 ------------------->
+        <section class="getintouch customer-container pb-md-5" id="contactus">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1 class="heading">get in touch</h1>
+                        <form id="ajax-header-contact-4"  >
+                            <div class="mb-md-4">
+                                <input type="text" class="form-control" id="name" name="name1" placeholder="Your Name"
+                                    required />
+                                 
+                            </div>
+                            
+                            <div class="mb-md-4">
+                                <input type="tel" class="form-control" id="phonenumber" name="phone"
+                                    placeholder="Phone Number" required pattern="^[0-9]{10}$"
+                                    title="Please enter a valid 10-digit phone number." />
+                            </div>
+                            <div class="mb-md-4">
+                                <input type="text" class="form-control" id="exampleInputEmail1" name="City"
+                                    placeholder="Your City" required />
+                            </div>
+                            <div class="mb-3 mt-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" required />
+                                <label class="form-check-label terms" for="exampleCheck1"> I agree with the <strong><a href="disclaimer.html">terms
+                                        and
+                                        conditions </a></strong> of this website for
+                                    the processing of personal data</label>
+                            </div>
+
+
+                            <button class="btn primary-btn">Submit</button>
+                        </form>
+
+
+
+
+
+                    </div>
+                    <div class="col-md-6">
+                        <img src="./assets/images/contact.webp" alt="get in touch"
+                            class="w-100 mt-5 mt-md-0 mb-md-0 mb-3" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-------------- get in touch end ----------->
+
+
+
+        <button class="btn btn-danger  i-am btn-download hidden-xs btn-brochure animated-button" onclick="openForm2()">Download
+            Brouchure</button>
+
+        <button class="btn btn-danger download1 brouchure-right hidden-xs animated-button " onclick="openForm()">Enquire Now</button>
+
+
+        <div class="col-lg-12 col-sm-12 col-xs-12 fixed-footer-cust ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 div-line pd0 ">
+                        <button class="btn  fix-link i-am colcall text-center btn-brochure" onclick="openForm2()"><i
+                                class="fa fa-envelope"></i>Download Brouchure
+                        </button>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 pd0">
+                        <button class="btn  fix-link download1 exbro text-center" onclick="openForm()"><i
+                                class="fa fa-download"></i>Enquire Now
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- cta ends -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer-content text-center">
+                            <div class="footer-logo justify-content-center">
+                                <div class="vertical-border"></div>
+                                <img src="./assets/images/footerlogo.webp" alt="Footer Logo" class="logo" />
+                            </div>
+                            <div class="footer-qr mt-3 justify-content-center d-flex gap-md-5 gap-2">
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row justify-content-center custom-top">
+                            <div class="col-md-6 m-11">
+                                <div class="add1">
+                                    <h3>Address</h3>
+                                    <p style="padding: 0rem 1rem 0rem 0rem;">Sahu City Main, Sultanpur Road (NH-56), near Purvanchal Expressway,
+                                       </p>
+                                </div>
+                            </div>
+                        
+                            <!-- <div class="col-md-3 m-11">
+                                <div class="bankacoutn">
+                                    <h3>Bank Account Details</h3>
+                                    <p>CANARA BANK | A/C NO.: 120025187153 ACCOUNT NAME: SLDPL COLLECTION A/C-SAHU CITY
+                                        PHASE-2IFSC
+                                        CODE: CNRB0000363</p>
+                                </div>
+                            </div> -->
+                            <div class="col-md-6 m-11 rera-details text-center text-white">
+                                <img src="./assets/images/rera1.png" alt="QR Code 1" width="20%" />
+                                <p>
+                                    This project is RERA registered.<br />
+                                    Sahu City Phase 2 - RERA REGN. NO.: UPRERAPRJ391104/02/2024 <br>
+                                    RERA WEBSITE : www.up-rera.in/projects
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    
+                    <div class="mt-2 copy-right text-center text-white">
+                        <p>Disclaimer:</p>
+                        <p>
+                            The content presented on this website is solely for
+                            informational purposes and does not constitute a service offer.
+                            Prices mentioned here are subject to change without prior
+                            notification, and the availability of the listed properties is
+                            not assured. Images showcased are illustrative and may not
+                            precisely represent the actual properties. Read more
+                        </p>
+                        <p>
+                             Sahu Land Developers Pvt. Ltd. ALL RIGHTS
+                            RESERVED.
+                            <p ><a class="text-decoration-none text-light" target="_blank" href="https://aajneeti.social/">Digital Media Planned & Marketed By
+                                AAJneeti Advertising</a></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </footer>
+
+        <div id="overlay" class="overlay" onclick="closeForm()"></div>
+
+
+<!-- form-1 -->
+
+        <div id="formModal" class="modal">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeForm()">&times;</button>
+                <h2 class="form-heading">Enquire Now</h2>
+                <form id="ajax-header-contact" >
+                    <div class="form-group">
+                        <label for="popup_name">Your Name</label>
+                        <input type="text" name="name1" placeholder="Enter your name" required />
+                    </div>
+                  
+                    <div class="form-group">
+                        <label for="popup_mobile">Phone Number</label>
+                        <input type="tel" name="phone" placeholder="Phone Number" required pattern="^[0-9]{10}$"
+                            title="Please enter a valid 10-digit phone number." />
+                    </div>
+                    <div class="form-group">
+                        <label for="popup_email">Your City</label>
+                        <input type="text" name="City" placeholder="Enter your City" required />
+                    </div>
+
+                    
+
+                    <button class="submit-btn" type="submit">Submit</button>
+                </form>
+
+            </div>
+        </div>
+
+
+
+
+        <!--form-2 Download Brouchure modal -->
+
+        <div id="formModal-new" class="modal">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeForm2()">&times;</button>
+                <h2 class="form-heading">Download Brouchure</h2>
+                <form id="ajax-header-contact-2" >
+                    <div class="form-group">
+                        <label for="popup_name">Your Name</label>
+                        <input type="text" id="popup_name" name="name1" placeholder="Enter your name" required />
+                        <input type="hidden" name="source" value="Download Brouchure" id="source" />
+                    </div>
+                    <div class="form-group">
+                        <label for="popup_mobile">Phone Number</label>
+                        <input type="tel" id="popup_mobile" name="phone" placeholder="Phone Number" required
+                            pattern="^[0-9]{10}$" title="Please enter a valid 10-digit phone number." />
+                       
+                    </div>
+                    <div class="form-group">
+                        <label for="popup_email">Your City</label>
+                        <input type="text" id="popup_email" name="City" placeholder="Enter your City" required />
+                    </div>
+                    
+
+
+                    
+
+                    <button id="popup_submit" class="submit-btn">Submit</button>
+                </form>
+
+            </div>
+        </div>
+
+
+
+        <!-- floorplan modal -->
+        <!-- Modal Form-3 -->
+        <div id="floorformModal" class="modal">
+            <div class="modal-content">
+                <button class="close-btn" onclick="floorcloseForm()">&times;</button>
+                <h2 class="form-heading">Floor plan</h2>
+                <form id="ajax-header-contact-3" >
+                    <div class="form-group">
+                        <label for="popup_name">Your Name</label>
+                        <input type="text" id="floor_name" name="name1" placeholder="Enter your name" required />
+                        <input type="hidden" name="source" value="Floor Plan" id="source" />
+                    </div>
+                  
+                    <div class="form-group">
+                        <label for="floor_mobile">Phone Number</label>
+                        <input type="text" id="floor_mobile" name="phone" placeholder="Phone Number" required
+                            pattern="^[0-9]{10}$" title="Please enter a valid 10-digit phone number." />
+                    </div>
+                    <div class="form-group">
+                        <label for="floor_email">Your City</label>
+                        <input type="text" id="floor_City" name="City" placeholder="Enter your City" required />
+                    </div>
+
+                    
+
+                    <button class="submit-btn">Submit</button>
+                </form>
+
+            </div>
+        </div>
+
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="./script.js"></script>
+        <script src="./form.js"></script>
+
+
+
+
+
+        <script>
+            window.addEventListener("load", () => {
+                const preloader = document.getElementById("preloader");
+                setTimeout(() => {
+                    preloader.style.opacity = "0"; // Fade out effect
+                    setTimeout(() => {
+                        preloader.style.display = "none"; // Remove from DOM after fading
+                    }, 500); // Adjust delay to match the fade-out duration
+                }, 500); // 3-second delay before fade out
+            });
+        </script>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <script>
+            let btnBrochure = document.querySelectorAll(".btn-brochure");
+            if (btnBrochure) {
+                btnBrochure.forEach((e) => {
+                    e.addEventListener("click", function() {
+                        document.getElementById("source2").value = "Brochure";
+                    });
+                });
+            }
+        </script>
+
+        <script>
+            function save_landing_pageinfo(elm) {
+                jQuery('#' + elm + ' input[type=submit], #' + elm + ' button').prop('disabled', true);
+                setTimeout(function() {
+                    jQuery('#' + elm + ' input[type=submit], #' + elm + ' button').prop('disabled', false);
+                }, 5000);
+                var name = jQuery('#' + elm + ' input[name="name"]').val();
+                var mobileno = jQuery('#' + elm + ' input[name="phonenumber"]').val();
+                var emailid = jQuery('#' + elm + ' input[name="email"]').val();
+                var message = jQuery('#' + elm + ' textarea[name="message"]').val();
+                var fsource = jQuery('#' + elm + ' input[name="source"]').val();
+
+                var current_url = location.hostname;
+
+                if (name == "") {
+                    //alert("Please Enter Your Name");
+                    return false;
+                }
+                mobileno = mobileno.replace(/[^0-9]/g, '');
+                if (mobileno.length != 10) {
+                    //alert("Please Enter 10 Digit Mobile Number");
+                    return false;
+                }
+                if (elm == 'main-popup') {
+                    emailid = "";
+                } else {
+                    var atpos = emailid.indexOf("@");
+                    var dotpos = emailid.lastIndexOf(".");
+                    if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= emailid.length) {
+                        return false;
+                    }
+                }
+
+
+                if (!consent) {
+                    return false;
+                };
+
+                if (message == undefined) {
+                    message = "";
+                }
+                if (name != "" && mobileno != "") {
+                    $("#pageloader").fadeIn();
+                     
+                    return true;
+                }
+                return false;
+            }
+
+            function submitForm(elm) {
+                document.createElement('form').submit.call(document.getElementById(elm));
+            }
+        </script>
+
+
+
+
+</body>
+
+</html>
