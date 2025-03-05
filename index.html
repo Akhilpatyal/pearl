@@ -1046,7 +1046,7 @@
                                 </div>
                             </div>
 
-                           
+
                             <div class="col-md-6 m-11 rera-details text-center text-white">
                                 <img src="./assets/images/rera1.png" alt="QR Code 1" width="20%" />
                                 <p>
@@ -1115,19 +1115,7 @@
             </div>
         </div>
 
-        <!-- Script to Show Modal Every 5 Seconds -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                setInterval(function () {
-                    var modalElement = document.getElementById('formModal');
-                    var modalInstance = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
-
-                    if (!modalElement.classList.contains('show')) {
-                        modalInstance.show();
-                    }
-                }, 5000);
-            });
-        </script>
+        
 
 
         <!--form-2 Download Brouchure modal -->
@@ -1291,22 +1279,20 @@
         </script>
 
         <script>
-        document.addEventListener("DOMContentLoaded", function () {
+           document.addEventListener("DOMContentLoaded", function () {
     setInterval(function () {
         var modalElement = document.getElementById('formModal');
         var modalInstance = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
 
-        modalInstance.show(); // Show the modal
+        if (!modalElement.classList.contains('show')) {
+            modalInstance.show();
+        }
 
         // Remove any existing backdrops to avoid stacking issues
         document.querySelectorAll('.modal-backdrop').forEach(backdrop => backdrop.remove());
-
-        // Auto-close the modal after 2 seconds, so it can be reopened
-        setTimeout(function () {
-            modalInstance.hide();
-        }, 2000); // Close the modal after 2 seconds
-    }, 3000); // Show the modal every 3 seconds
+    }, 3000);
 });
+         
         </script>
 
 </body>
