@@ -1290,20 +1290,23 @@
             }
         </script>
 
-        <script>document.addEventListener("DOMContentLoaded", function () {
-                setInterval(function () {
-                    var modalElement = document.getElementById('formModal');
-                    var modalInstance = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    setInterval(function () {
+        var modalElement = document.getElementById('formModal');
+        var modalInstance = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
 
-                    if (!modalElement.classList.contains('show')) {
-                        modalInstance.show();
-                    }
+        modalInstance.show(); // Show the modal
 
-                    // Remove any existing backdrops to avoid stacking issues
-                    document.querySelectorAll('.modal-backdrop').forEach(backdrop => backdrop.remove());
-                }, 3000);
-            });
+        // Remove any existing backdrops to avoid stacking issues
+        document.querySelectorAll('.modal-backdrop').forEach(backdrop => backdrop.remove());
 
+        // Auto-close the modal after 2 seconds, so it can be reopened
+        setTimeout(function () {
+            modalInstance.hide();
+        }, 2000); // Close the modal after 2 seconds
+    }, 3000); // Show the modal every 3 seconds
+});
         </script>
 
 </body>
