@@ -1620,7 +1620,7 @@ footer {
   padding: 2%;
   height: auto;
   width: 100%;
-  background-color: rgba(65, 64, 64, 0.556);
+  background-color: rgba(65, 64, 64, 0.4);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1662,7 +1662,22 @@ footer {
   right: 2rem;
   position: fixed;
   z-index: 999;
-  background: #505e69 !important;
+  background: #0fe02b !important;
+  border: 1px solid #000 !important;
+  /* border: none; */
+  letter-spacing: 1px;
+  font-size: 16px !important;
+  padding: 12px !important;
+  width: fit-content;
+}
+.brouchure-right-2 {
+  position: fixed;
+  bottom: 2rem;
+  color: #fff;
+  right: 6rem;
+  position: fixed;
+  z-index: 999;
+  background: #0685e6 !important;
   border: 1px solid #000 !important;
   /* border: none; */
   letter-spacing: 1px;
@@ -1717,6 +1732,11 @@ footer {
   }
   .fixed-footer-cust {
     display: block !important;
+  }
+}
+@media (min-width: 768px) { /* Hides on tablets and larger screens */
+  .hidden-s {
+      display: none !important;
   }
 }
 

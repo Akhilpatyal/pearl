@@ -292,72 +292,38 @@ function floorcloseForm() {
 
 // form submition
 const form = document.getElementById("form");
-form.addEventListener("input", () => {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("exampleInputEmail1").value.trim();
-  const phone = document.getElementById("phonenumber").value.trim();
-  const checkbox = document.getElementById("exampleCheck1").checked;
-  const isValidPhone = /^[0-9]{10}$/.test(phone);
+// form.addEventListener("input", () => {
+//   const name = document.getElementById("name").value.trim();
+//   const email = document.getElementById("exampleInputEmail1").value.trim();
+//   const phone = document.getElementById("phonenumber").value.trim();
+//   const checkbox = document.getElementById("exampleCheck1").checked;
+//   const isValidPhone = /^[0-9]{10}$/.test(phone);
 
-  if (name && email && isValidPhone && checkbox) {
-    // form.submit();
-  }
-});
+//   if (name && email && isValidPhone && checkbox) {
+//     // form.submit();
+//   }
+// });
 
 document.addEventListener("DOMContentLoaded", () => {
   const popupform = document.getElementById("popupform");
 
-  popupform.addEventListener("input", () => {
-    const name = document.getElementById("popup_name").value.trim();
-    const phone = document.getElementById("popup_mobile").value.trim();
-    const email = document.getElementById("popup_email").value.trim();
-    const isValidEmail =
-      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
-    const isValidPhone = /^[0-9]{10}$/.test(phone);
+  // popupform.addEventListener("input", () => {
+  //   const name = document.getElementById("popup_name").value.trim();
+  //   const phone = document.getElementById("popup_mobile").value.trim();
+  //   const email = document.getElementById("popup_email").value.trim();
+  //   const isValidEmail =
+  //     /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+  //   const isValidPhone = /^[0-9]{10}$/.test(phone);
 
-    // Check if name, email, and phone are valid and fully entered
-    if (name && email && isValidEmail && isValidPhone) {
-      // popupform.submit(); // Submit form if all fields are valid
-    }
-  });
+  //   // Check if name, email, and phone are valid and fully entered
+  //   if (name && email && isValidEmail && isValidPhone) {
+  //     // popupform.submit(); // Submit form if all fields are valid
+  //   }
+  // });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
   const popupform1 = document.getElementById("popupform1");
-
-  popupform1.addEventListener("input", () => {
-    const name = document.getElementById("floor_name").value.trim();
-    const phone = document.getElementById("floor_mobile").value.trim();
-    const email = document.getElementById("floor_email").value.trim();
-
-    // Phone number validation: Check for exactly 10 digits
-    const isValidPhone = /^[0-9]{10}$/.test(phone);
-
-    // Check if all fields are valid
-    if (name && email && isValidPhone) {
-      // popupform1.submit(); // Auto-submit the form
-    }
-  });
-});
-
-// back to top
-document.addEventListener("DOMContentLoaded", () => {
-  const backToTopBtn = document.getElementById("backToTop");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      backToTopBtn.style.display = "block";
-    } else {
-      backToTopBtn.style.display = "none";
-    }
-  });
-
-  backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });
 });
 
 // scrollinng to and redirect and close that hamburger menu
